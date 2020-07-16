@@ -1,0 +1,587 @@
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1349px;
+}
+// ХЕДЕР НИЖЕ
+header {
+  width: 100%;
+  height: 97px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .menu a {
+    text-transform: uppercase;
+    color: black;
+    margin-right: 50px;
+    font-size: 14px;
+    font-family: arial, sans-serif; // шрифт
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .name_firm {
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: arial, sans-serif; // шрифт
+    margin-left: -66px;
+  }
+  .addres_up {
+    text-align: right;
+    font-family: arial, sans-serif; // шрифт
+  }
+}
+
+// ХЕДЕР ВЫШЕ
+
+// БЛОК С БОЛЬШИМ ФОТО НИЖЕ
+
+.big_photo {
+  background-image: url(/img/11_up_bgc.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 562px;
+  background-attachment: fixed;
+  position: relative;
+  .get_order {
+    // блок оформить заказ
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    width: 536px;
+    height: 300px;
+    background-color: #fff;
+    font-family: arial, sans-serif; // шрифт
+    p {
+      text-align: center;
+      font-size: 30px;
+      margin-top: 70px;
+      margin-bottom: 43px;
+      span {
+        font-weight: bold;
+      }
+    }
+    .purchase {
+      //   кнопка оформить заказ
+      width: 232px;
+      height: 58px;
+      border: none;
+      outline: none;
+      background-color: #000;
+      color: #fff;
+      margin-left: 152px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+  .main_modal {
+    // всплывающая форма для заказа
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999999;
+    display: none;
+    .modal_content {
+      width: 400px;
+      height: 350px;
+      margin: 100px auto;
+      background-color: #fff;
+      border-radius: 5px;
+      position: relative;
+      font-family: arial, sans-serif; // шрифт
+      h3 {
+        font-size: 25px;
+        text-align: center;
+        padding-top: 60px;
+        padding-bottom: 10px;
+      }
+      p {
+        font-size: 14px;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+      form {
+        //  форма для заказа дверей
+        width: 80%;
+        margin-left: 10%;
+        .name,
+        .number {
+          width: 100%;
+          margin-bottom: 18px;
+          border-radius: 3px;
+          outline: none;
+          border: 1px solid grey;
+          height: 25px;
+          padding-left: 10px;
+          height: 40px;
+        }
+        .ups {
+          font-size: 12px;
+          text-align: center;
+          padding-bottom: 0px;
+          margin-top: -5px;
+          color: red;
+          display: none;
+        }
+        .btn {
+          width: 60%;
+          margin-left: 20%;
+          height: 40px;
+          background-color: #000;
+          color: #fff;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          outline: none;
+          border-radius: 0px;
+          margin-top: 10px;
+        }
+      }
+      .img {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+// окно после заказа
+.main_modal2 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999999;
+  display: none;
+}
+.modal_content2 {
+  width: 400px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 250px auto;
+  font-family: arial, sans-serif; // шрифт
+  h3 {
+    font-size: 25px;
+    text-align: center;
+    padding-top: 50px;
+  }
+  p {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+  }
+}
+
+// БЛОК С КАРТИНКАМИ
+.gallary {
+  font-family: arial, sans-serif; // шрифт
+  position: relative;
+  h2 {
+    text-align: center;
+    font-size: 42px;
+    padding-top: 90px;
+  }
+  h3 {
+    font-size: 22px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 70px;
+  }
+  .fotos {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: 220px 100px 220px;
+    width: 90%;
+    margin-left: 5%;
+    .photo1 {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      background-color: #dada;
+    }
+    .photo2 {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      background-color: #dadada;
+    }
+    .photo3 {
+      grid-column: 3/4;
+      grid-row: 1/3;
+      background-color: green;
+    }
+    .photo4 {
+      grid-column: 1/3;
+      grid-row: 2/4;
+      background-color: red;
+    }
+    .photo5 {
+      grid-column: 3/4;
+      grid-row: 3/4;
+      background-color: blue;
+    }
+  }
+  .fotos > div:hover {
+    opacity: 0.9;
+    cursor: pointer;
+    background-image: url(/img/plus30.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  p {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    a {
+      color: black;
+      font-size: 20px;
+      text-transform: uppercase;
+      font-family: arial, sans-serif; // шрифт
+      &::after {
+        content: url(/img/arrow23.png);
+        position: relative;
+        top: 4px;
+      }
+    }
+  }
+  // .triangle-bottom {
+  //   display: inline-block;
+  //   width: 0;
+  //   height: 0;
+  //   border-style: solid;
+  //   border-width: 37px 64.5px 0 64.5px;
+  //   border-color: #fff transparent transparent transparent;
+  //   margin-bottom: -43px;
+  //   margin-left: 50%;
+  //   transform: translateX(-50%);
+  // }
+}
+.gallary::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 37px 64.5px 0 64.5px;
+  border-color: #fff transparent transparent transparent;
+}
+// БЛОК С КАРТИНКАМИ ВЫШЕ
+
+.we_work {
+  font-family: arial, sans-serif; // шрифт
+  background-color: #f5f5f5;
+  h1 {
+    padding-top: 100px;
+    text-align: center;
+    font-size: 45px;
+    padding-bottom: 80px;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 47% 6% 47%;
+    grid-template-rows: repeat(3, 200px);
+    div:first-child {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      h2 {
+        font-size: 24px;
+        text-align: right;
+        margin-right: 2%;
+        padding-bottom: 20px;
+        padding-top: 7px;
+      }
+      p {
+        margin-right: 2%;
+        text-align: right;
+        font-size: 17px;
+        color: #6b6b6b;
+      }
+    }
+    div:nth-child(2) {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+    div:nth-child(3) {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+    div:nth-child(4) {
+      grid-column: 3/4;
+      grid-row: 2/3;
+      h2 {
+        padding-top: 7px;
+        margin-left: 2%;
+        font-size: 24px;
+        padding-bottom: 20px;
+      }
+      p {
+        margin-left: 2%;
+        font-size: 17px;
+        color: #6b6b6b;
+      }
+    }
+    div:nth-child(5) {
+      grid-column: 1/2;
+      grid-row: 3/4;
+      h2 {
+        margin-right: 2%;
+        padding-top: 7px;
+        font-size: 24px;
+        text-align: right;
+        padding-bottom: 20px;
+      }
+      p {
+        margin-right: 2%;
+        text-align: right;
+        font-size: 17px;
+        color: #6b6b6b;
+      }
+    }
+    div:nth-child(6) {
+      grid-column: 2/3;
+      grid-row: 3/4;
+    }
+  }
+  .wrapper div > .circle {
+    width: 54px;
+    height: 54px;
+    border: 2px solid #161616;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+  }
+  .know_more {
+    text-align: center;
+    padding-bottom: 40px;
+    a {
+      color: black;
+      font-size: 20px;
+      text-transform: uppercase;
+      font-family: arial, sans-serif; // шрифт
+      &::after {
+        content: url(/img/arrow23.png);
+        position: relative;
+        top: 4px;
+      }
+    }
+  }
+}
+.we_work::after {
+  @extend .gallary::after;
+  border-color: #f5f5f5 transparent transparent transparent;
+}
+
+// блок КАК МЫ РАБОТАЕМ ВЫШЕ
+
+// блок О НАШИХ ДИЗАЙНЕРАХ НИЖЕ
+%butt {
+  // для кнопок оформить заказ(всех кроме первой)
+  width: 232px;
+  height: 58px;
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.design {
+  h1 {
+    text-align: center;
+    font-size: 42px;
+    font-family: arial, sans-serif; // шрифт
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  .our_designers {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    .first {
+      margin-right: 1%;
+      height: 245px;
+      width: 406px;
+      background-image: url(../img/12.png);
+    }
+    .second {
+      margin-left: 1%;
+      width: 393px;
+      height: 245px;
+      background-image: url(../img/13.png);
+    }
+  }
+  .text {
+    display: flex;
+    justify-content: center;
+    .aboute_our_designers {
+      text-align: justify;
+      width: 76%;
+      font-size: 18px;
+      font-family: arial, sans-serif; // шрифт
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+  .press {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    .purchase2 {
+      margin-bottom: 60px;
+      @extend %butt;
+    }
+  }
+}
+.design::after {
+  @extend.gallary::after;
+}
+
+// блок О НАШИХ ДИЗАЙНЕРАХ ВЫШЕ
+
+// блок ЗАКАЗАТЬ ЗВОНОК НИЖЕ
+.consultation {
+  background-color: #f5f5f5;
+  h1 {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 42px;
+    font-family: arial, sans-serif; // шрифт
+  }
+  p {
+    font-family: arial, sans-serif; // шрифт
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 50px;
+    font-weight: 100;
+  }
+  .press1 {
+    display: flex;
+    justify-content: center;
+    .purchase3 {
+      margin-bottom: 60px;
+      @extend %butt;
+    }
+  }
+}
+
+// блок с КАРУСЕЛЬЮ ниже
+.review {
+  h1 {
+    font-size: 42px;
+    text-align: center;
+    padding-top: 80px;
+  }
+  .carusel {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    .container {
+      width: 70%;
+      .ava {
+        width: 22%;
+        .photos {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          background-color: #dada;
+          margin-left: 20px;
+        }
+      }
+      .carousel-caption {
+        position: absolute;
+        left: 25%;
+        width: 75%;
+        bottom: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+        .comment {
+          text-align: left;
+          font-family: "Stylus BT", sans-serif;
+          font-size: 16px;
+          color: #000000;
+          margin-bottom: 0;
+        }
+        .sign {
+          font-family: "Stylus BT", sans-serif;
+          font-size: 18px;
+          border-radius: 2px;
+          font-weight: bold;
+          color: black;
+          text-align-last: left;
+          margin-top: 5px;
+        }
+      }
+      .carousel-control-prev {
+        width: 26px;
+        height: 51px;
+        margin-left: -50px;
+        margin-top: 50px;
+        .carousel-control-prev-icon {
+          background-image: url(../img/arrowLeft.svg);
+          background-size: cover;
+          width: 26px;
+          height: 51px;
+        }
+      }
+      .carousel-control-next {
+        width: 26px;
+        height: 51px;
+        margin-right: -50px;
+        margin-top: 50px;
+        .carousel-control-next-icon {
+          background-image: url(../img/arrowRight.svg);
+          background-size: cover;
+          width: 26px;
+          height: 51px;
+        }
+      }
+    }
+  }
+}
+// блок с КАРУСЕЛЬЮ выше
+footer{
+  background-color: #f5f5f5;
+  .adress{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    div{
+      a{
+        color: black;
+      }
+    }
+    .post_adress{
+      text-align: right;
+    }
+  }
+  .network{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    div{
+      width: 300px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

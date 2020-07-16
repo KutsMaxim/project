@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>open the door</title>
+  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css" />
+  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/media.css" />
+</head>
+
+<body ng-app="mainModule">
+  <header>
+    <nav class="menu">
+      <a href="#">Дизайнеры</a>
+      <a href="#">Портфолио</a>
+      <a href="#">Контакты</a>
+    </nav>
+    <p class="name_firm">open the door</p>
+    <p class="addres_up">
+      Склад магазин. пр-т. Центральный 172<br />
+      бесплатная доставка по Николаеву
+    </p>
+  </header>
+  <div class="big_photo">
+    <div class="get_order">
+      <p>
+        Установка дверей<br />
+        со скидкой <span>33%</span> до 1 июня
+      </p>
+      <button class="purchase">оформить заказ</button>
+    </div>
+    <!-- всплывающая форма для заказа  -->
+    <div class="main_modal">
+      <div class="modal_content">
+        <h3>Форма заказа</h3>
+        <p>Закажите двери сейчас и получите скидку <br />33%</p>
+        <!-- отсчет времени тут -->
+        <form action="#" method="post" name="name" autocomplete="off" onsubmit="return false">
+          <input type="text" class="name" placeholder="Имя" pattern="[А-Яа-яЁё]{1,}" maxlength="15" />
+          <input type="text" class="number" placeholder="Телефон" pattern="[0-9]{10}" maxlength="10" />
+          <p class="ups">заполните все поля</p>
+          <input type="submit" value="заказать двери" class="btn" />
+        </form>
+        <img src="img/icon.png" alt="alt" class="img" />
+      </div>
+    </div>
+    <div class="main_modal2">
+      <div class="modal_content2">
+        <h3>Спасибо за Ваш заказ</h3>
+        <p>Мы с Вами свяжемся в ближайшее время</p>
+      </div>
+    </div>
+  </div>
+  <!-- блок с картинками ниже -->
+  <div class="gallary" ng-controller="cont1">
+    <h2>Вдохновитесь нашими проектами</h2>
+    <h3>Работы, которыми мы гордимся</h3>
+    <div class="fotos">
+      <div class="photo1"></div>
+      <div class="photo2"></div>
+      <div class="photo3"></div>
+      <div class="photo4"></div>
+      <div class="photo5"></div>
+    </div>
+    <p>
+      <a href="https://www.facebook.com/" target="_blank">почитать в блоге</a>
+    </p>
+    <!-- <div class="triangle-bottom"></div> -->
+  </div>
+
+  <!-- блок как мы работаем ниже -->
+  <div class="we_work">
+    <h1>Как мы работаем</h1>
+    <div class="wrapper">
+      <div>
+        <h2>Бесплатная консультация</h2>
+        <p>
+          Мы с удовольствием расскажем вам о лучших<br />
+          решениях для вашего дома и учтем<br />
+          все ваши пожелания. Первая консультация<br> всегда бесплатная для вас.
+        </p>
+      </div>
+      <div>
+        <div class="circle">1</div>
+      </div>
+      <div>
+        <div class="circle">2</div>
+      </div>
+      <div>
+        <h2>Уточняем дизайн и размер</h2>
+        <p>
+          Важно, чтобы все параметры идеально подходили.<br> Мы обязательно
+          сделаем предварительный замер,<br />а вы выбираете необходимый
+          дизайн, включая формы<br> и стилевые решения. Наши дизайнеры помогут
+          вам.
+        </p>
+      </div>
+      <div>
+        <h2>Оплата и доставка</h2>
+        <p>
+          После оплаты заказа, необходимо выбрать<br> время и способ доставки. Мы
+          привезем вам<br> весь товар в срок и бесплатно установим.<br> Доставка в
+          течение трех дней.
+        </p>
+      </div>
+      <div>
+        <div class="circle">3</div>
+      </div>
+    </div>
+    <p class="know_more"><a href="https://www.facebook.com/" target="_blank">узнать больше</a></p>
+  </div>
+
+  <!-- блок о наших дизайнерах ниже -->
+  <div class="design">
+    <h1>О наших дизайнерах</h1>
+    <div class="our_designers">
+      <div class="first"></div>
+      <div class="second"></div>
+    </div>
+    <div class="text">
+      <p class="aboute_our_designers">Компания <span>OPEN THE DOOR</span> давно радует своих клиентов интересным и
+        незаурядным дизайном. Мы не просто устанавливаем двери в вашем доме или офисе, а используем нестандартные
+        решения и готовы к сложным проектам.
+        Наши дизайнеры могут предложить вам готовые решения, а также составить дизайн-проект, опираясь только на ваши
+        пожелания. Наша команда работает в сфере домашнего интерьера больше 15 лет.</p>
+    </div>
+    <div class="press"> <button class="purchase2">Оформить заказ</button></div>
+  </div>
+
+  <!-- блок ЗАКАЗАТЬ ЗВОНОК НИЖЕ -->
+  <div class="consultation">
+    <h1>Бесплатная консультация!</h1>
+    <p>Оставьте заявку и мы позвоним вам в ближайшее время<br> для бесплатной консультации.</p>
+    <div class="press1"> <button class="purchase3">Отправить заявку</button></div>
+  </div>
+  </div>
+
+  <!-- Отзывы наших клиентов ниже -->
+  <div class="review">
+    <h1>Отзывы наших клиентов</h1>
+    <!--  КАРУСЕЛЬ -->
+    <div class="carusel">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-interval="false">
+              <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                  <div class="ava">
+                    <div class="photos"></div>
+                  </div>
+                  <div class="carousel-caption d-none d-md-block">
+                    <p class="comment">Давно не менял ничего в своем домашнем пространстве. Захотелось перепланировку.
+                      Но специалистов, готовых установить новые двери и предложить нестандартное решение, очень мало.
+                      Мне нужно было что-то интересное. Я получил такое предложение от компании Open the door. Хорошее
+                      отношение к клиентам и потрясающий опыт у ребят!</p>
+                    <p class="sign">Павел Левченко</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="ava">
+                    <div class="photos"></div>
+                  </div>
+                  <div class="carousel-caption d-none d-md-block">
+                    <p class="comment">Недавно наша компания заехала в новое лофт-пространство, где располагается теперь
+                      офис. И было много проблем с установкой окон и дверей и решением, как это сделать лучше.
+                      Обратились в эту компанию по рекомендации знакомых и буквально за два месяца получили то, чего
+                      сами бы сделать не смогли. Спасибо, обращусь еще раз обязательно!</p>
+                    <p class="sign">Яна Исакова</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="ava">
+                    <div class="photos"></div>
+                  </div>
+                  <div class="carousel-caption d-none d-md-block">
+                    <p class="comment">Нам часто приходится делать ремонты на объектах. Давно сотрудничаем с компанией
+                      Open the door. Ребята за это все это время зарекомендовали себя как хорошие и надежные партнеры.
+                      Еще их команда дизайнеров мне очень нравится. Не раз удивляли интересными решениями. Будем
+                      продолжать сотрудничать, рекомендую всем.</p>
+                    <p class="sign">Петр Исаев</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="ava">
+                    <div class="photos"></div>
+                  </div>
+                  <div class="carousel-caption d-none d-md-block">
+                    <p class="comment">Обратилась один раз к этой компании. Могу сказать, что сервис порадовал. Не нужно
+                      было долго ждать дизайн-проекта и доставки, все в оговоренные сроки, поэтому очень рекомендую тем,
+                      кто ценит свое время! Спасибо за вашу работу. Думаю, что в следующий раз снова обращусь к ним, тем
+                      более мне предложили скидку как постоянному клиенту.</p>
+                    <p class="sign">Ира васильева</p>
+                  </div>
+                </div>
+
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  КАРУСЕЛЬ ВЫШЕ -->
+  <footer>
+    <div class="adress">
+      <div>
+        <p class="email"><a href="https://www.google.com/intl/ru/gmail/about/" target="_blank">hello@openthedoor.ua</a>
+        </p>
+        <p class="number">+38(097) 333 33 33</p>
+      </div>
+      <div class="post_adress">54000, Николаев,<br> пр-т. Центральный д.172</div>
+    </div>
+    <div class="network">
+      <div>
+        <a href="https://www.instagram.com/?hl=ru" target="_blank"><img src="/img/insta.png" alt="alt" width="40"
+            height="40"></a>
+        <a href="https://www.facebook.com/" target="_blank"><img src="/img/fb.png" alt="alt" width="40" height="40"></a>
+        <a href="https://twitter.com/" target="_blank"><img src="/img/tw1.png" alt="alt" width="40" height="40"></a>
+        </di>
+      </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="libs/angular.min.js"></script>
+  <script src="libs/jquery-3.4.1.min.js"></script>
+  <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
